@@ -1,0 +1,68 @@
+<div class="week">
+  <div class="date">
+    <p class="number">{{week.week}}</p>
+    <p class="full">{{week.friday}}</p>
+  </div>
+  <div class="text">
+    <h4>Fika</h4>
+    {{week.fika.real_name}}
+    <h4>Dependencies</h4>
+    {{week.dependencies.real_name}}
+  </div>
+  <div class="avatars">
+    <img src={{week.fika.image_48}} />
+    <img src={{week.dependencies.image_48}} />
+  </div>
+</div>
+
+<style>
+  .week {
+    display: flex;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .week .date {
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  .week .date .number {
+    font-size: 28px;
+    margin: 0;
+  }
+  .week .date .full {
+    font-size: 13px;
+    margin: 0;
+    color: rgba(29, 29, 39, 0.7);
+  }
+
+  .week .text {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .week .text h4 {
+    margin: 0;
+  }
+
+  .week .avatars {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .week .avatars img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 35%;
+  }
+
+</style>

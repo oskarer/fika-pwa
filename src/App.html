@@ -1,10 +1,17 @@
 {{#each weeks as week}}
-  <div>{{week.week}} {{week.dependencies}} {{week.fika}}</div>
+  <Week week='{{week}}'/>
 {{/each}}
 
-<div class='foo'>
-  Big red Comic Sans
-</div>
+<script>
+  import Week from './Week.html';
+
+  export default {
+    components: {
+      Week
+    }
+  }
+
+</script>
 
 <style>
   .foo {
