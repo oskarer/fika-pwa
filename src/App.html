@@ -1,6 +1,13 @@
-{{#each weeks as week}}
+{{#if weeks.length === 0}}
+  <Week />
+  <Week />
+  <Week />
+  <Week />
+{{else}}
+  {{#each weeks as week}}
   <Week week='{{week}}'/>
-{{/each}}
+  {{/each}}
+{{/if}}
 
 <script>
   import Week from './Week.html';

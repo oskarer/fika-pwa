@@ -1,12 +1,13 @@
 module.exports = {
   entry: {
-    'index': [ './src/index.js' ]
+    'index': './src/index.js',
+    'sw': './src/sw.js'
   },
   resolve: {
     extensions: [ '.js', '.html' ]
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname,
     filename: '[name].js',
     chunkFilename: '[name].[id].js'
   },

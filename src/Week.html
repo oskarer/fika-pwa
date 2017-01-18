@@ -1,23 +1,26 @@
 <div class="week">
-  <div class="date">
-    <p class="number">{{week.week}}</p>
-    <p class="full">{{week.friday}}</p>
-  </div>
-  <div class="text">
-    <h4>Fika</h4>
-    {{week.fika.real_name}}
-    <h4>Dependencies</h4>
-    {{week.dependencies.real_name}}
-  </div>
-  <div class="avatars">
-    <img src={{week.fika.image_48}} />
-    <img src={{week.dependencies.image_48}} />
-  </div>
+  {{#if week}}
+    <div class="date">
+      <p class="number">{{week.week}}</p>
+      <p class="full">{{week.friday}}</p>
+    </div>
+    <div class="text">
+      <h4>Fika</h4>
+      {{week.fika.real_name}}
+      <h4>Dependencies</h4>
+      {{week.dependencies.real_name}}
+    </div>
+    <div class="avatars">
+      <img src={{week.fika.image_48}} />
+      <img src={{week.dependencies.image_48}} />
+    </div>
+  {{/if}}
 </div>
 
 <style>
   .week {
     display: flex;
+    height: 110px;
     width: 100%;
     background: white;
     border-bottom: 1px solid rgba(0,0,0,0.1);
