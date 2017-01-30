@@ -11,7 +11,6 @@ const app = new App({
     const response = await fetch(
       'https://uosdxsnu6j.execute-api.eu-central-1.amazonaws.com/latest/all');
     const result = await response.json();
-    console.log(result);
     app.set({ weeks: result })
   } catch (error) {
     console.log(error.message);
@@ -21,7 +20,7 @@ const app = new App({
 // if ('serviceWorker' in navigator) {
 //   window.addEventListener('load', function() {
 //     navigator.serviceWorker.register('/sw.js').then(function(registration) {
-//       // Registration was successful
+//       // Registration was successful :)
 //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
 //     }).catch(function(err) {
 //       // registration failed :(
