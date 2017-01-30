@@ -22,11 +22,6 @@ self.addEventListener('fetch', function (event) {
   event.respondWith(getResponse());
 
   async function getResponse() {
-    const hit = await caches.match(event.request);
-    if (hit) {
-      return hit;
-    }
-
     // Clone request stream
     const fetchRequest =  event.request.clone();
     try {
@@ -35,6 +30,10 @@ self.addEventListener('fetch', function (event) {
       return response;
     } catch (error) {
       console.log('No response for request', event.request);
+    }
+    const hit = await caches.match(event.request);
+    if (hit) {
+      return hit;
     }
   }
 });
