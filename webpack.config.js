@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
-    'index': './src/index.js',
-    'sw': './src/sw.js'
+    index: './src/index.js',
+    sw: './src/sw.js'
   },
   resolve: {
     extensions: [ '.js', '.html' ]

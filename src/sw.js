@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime';
+
 var CACHE_NAME = 'fika-cache-v1';
 var urlsToCache = [
   '/',
